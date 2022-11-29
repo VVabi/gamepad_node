@@ -39,6 +39,15 @@ class GamepadMapper():
             return mapping["mapping"][value]
         return value
 
+    def type_is_mapped(self, type):
+        return str(type) in  self.string_mappings["buttons"]
+
+    def get_button_type(self, type, code):
+        button_name = self.get_button_name(type, code)
+        if button_name in self.config["values"]:
+            return self.config["values"][button_name]["button_type"]
+        return self.config["values"]["default"]["button_type"]
+
 def get_gamepad_config(gamepad_name):
     config_file = gamepad_name+"_gamepad.toml"
 
