@@ -1,6 +1,6 @@
 from evdev import InputDevice, categorize, ecodes
 from gamepad_config import get_gamepad_config
-from gamepad_messages import *
+from protocol.gamepad_node_messages import *
 import paho.mqtt.client as mqtt
 import json
 

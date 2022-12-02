@@ -1,17 +1,5 @@
 import toml
 
-LEFT_KEY        = "left"
-RIGHT_KEY       = "right"
-BOTTOM_KEY      = "bottom"
-TOP_KEY         = "top"
-L1_KEY          = "l1"
-L2_KEY          = "l2"
-R1_KEY          = "r1"
-R2_KEY          = "r2"
-START_KEY       = "start"
-SELECT_KEY      = "select"
-
-
 class GamepadMapper():
     def __init__(self, config_dict):
         self.config = config_dict
