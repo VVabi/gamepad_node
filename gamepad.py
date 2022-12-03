@@ -3,13 +3,19 @@ from gamepad_config import get_gamepad_config
 from protocol.gamepad_node_messages import *
 import paho.mqtt.client as mqtt
 import json
+import os
+import time
 
 mapper = get_gamepad_config("bitdo")
 
-gamepad = InputDevice('/dev/input/event17')
+input_device_path = '/dev/input/event1'
+while not os.path.exists(input_device_path):
+    time.sleep(1)
+
+gamepad = InputDevice(input_device_path)
 
 client = mqtt.Client()
-client.connect("localhost", 1883, 60)
+client.connect("10.0.0.36", 1883, 60)
 client.loop_start()
 
 for event in gamepad.read_loop():
