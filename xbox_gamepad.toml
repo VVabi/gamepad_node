@@ -1,0 +1,53 @@
+[values]
+   [values.default]
+        "button_type"       = "discrete"
+        [values.default.mapping]
+        "pressed"           = 1
+        "released"          = 0
+        "held"              = 2
+   [values.axis_left_right]
+        "button_type"       = "discrete"
+        [values.axis_left_right.mapping]
+        "left"              = -1
+        "released"          = 0
+        "right"             = 1
+   [values.axis_top_bottom]
+        "button_type"       = "discrete"
+        [values.axis_top_bottom.mapping]
+        "top"               = -1
+        "released"          = 0
+        "bottom"            = 1
+   [values.left_stick_left_right]
+        "button_type"       = "continuous"
+        "max"               = 65536
+        "min"               = 0
+   [values.left_stick_top_bottom]
+        "button_type"       = "continuous"
+        "max"               = 65536
+        "min"               = 0
+   [values.right_stick_left_right]
+        "button_type"       = "continuous"
+        "max"               = 65536
+        "min"               = 0
+   [values.right_stick_top_bottom]
+        "button_type"       = "continuous"
+        "max"               = 65536
+        "min"               = 0
+
+[buttons]
+ [buttons.1]
+    left        = 307
+    top         = 308
+    right       = 305
+    bottom      = 304
+    l1          = 310
+    r1          = 311
+    start       = 315
+    select      = 314
+ [buttons.3]
+    axis_left_right = 16
+    axis_top_bottom = 17
+    left_stick_left_right = 0
+    left_stick_top_bottom = 1
+    right_stick_left_right = 3
+    right_stick_top_bottom = 4

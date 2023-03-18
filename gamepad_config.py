@@ -16,6 +16,8 @@ class GamepadMapper():
                 self.string_mappings["values"][key]["mapping"] = {v:k for k,v in self.config["values"][key]["mapping"] .items()}
 
     def get_button_name(self, type, code):
+        if code not in self.string_mappings["buttons"][str(type)]:
+            return None
         return self.string_mappings["buttons"][str(type)][code]
 
     def get_button_state(self, type, code, value):
